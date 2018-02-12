@@ -65,12 +65,22 @@ Core.menu={
         data: [[{
             text: "背景1",
             func: function() {
-                $(this).attr("style",'background:url(images/background.jpg) repeat right bottom transparent;');
+                $(this).attr("style",'background:url(images/bg1.jpg) repeat right bottom transparent;');
             }
         }, {
             text: "背景2",
             func: function() {
-                $(this).attr("style",'background:url(images/background2.jpg) repeat right bottom transparent;');
+                $(this).attr("style",'background:url(images/bg2.jpg) repeat right bottom transparent;');
+            }
+        }, {
+            text: "背景3",
+            func: function() {
+                $(this).attr("style",'background:url(images/bg3.jpg) repeat right bottom transparent;');
+            }
+        }, {
+            text: "背景4",
+            func: function() {
+                $(this).attr("style",'background:url(images/bg4.jpg) repeat right bottom transparent;');
             }
         }]]
     }]
@@ -194,7 +204,7 @@ Core.init = function(){
 //创建窗体
 Core.create = function(obj,opt){
     //ZENG.msgbox.show(typeof(obj), 1, 2000);
-    if(typeof(obj)==='string'){
+    if ( typeof(obj)==='string' ) {
         var options = {
             num		:Date.parse(new Date()),
             imgsrc	:"images/shortcut/news.png",
@@ -204,16 +214,16 @@ Core.create = function(obj,opt){
             height	:opt.height,
             resize	:opt.resize
         };
-    }else{
+    } else {
         var sc = obj.attr('shortcut');
         var options = {
-            num		:shortcut[sc][0],
-            title	:shortcut[sc][1],
-            imgsrc	:shortcut[sc][2],
-            url		:shortcut[sc][3],
-            width	:shortcut[sc][4],
-            height	:shortcut[sc][5],
-            resize	:true
+            num : shortcut[sc][0],
+            title : shortcut[sc][1],
+            imgsrc : shortcut[sc][2],
+            url : shortcut[sc][3],
+            width : shortcut[sc][4],
+            height : shortcut[sc][5],
+            resize : true
         };
     }
 

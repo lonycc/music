@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>听歌</title>
-		<meta name="keywords" content="" />
-        <meta name="description" content="" />
-        <link type="text/css" rel="stylesheet" href="css/css.css"/>
-        <script src="http://libs.baidu.com/jquery/1.8.0/jquery.min.js"></script>
-        <script src="js/shortcut.js"></script>
-        <script src="js/templates.js"></script>
-        <script src="js/core.js"></script>
-        <script>
-            $().ready(function(){
-                //IE下禁止选中
-                document.body.onselectstart = document.body.ondrag = function(){return false;}
-                //初始化
-                Core.init();
-            });
-        </script>
 
-        <!--[if IE]>
+<head>
+    <meta charset="utf-8" />
+    <title>听歌</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link type="text/css" rel="stylesheet" href="css/css.css" />
+    <script src="http://apps.bdimg.com/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="js/jquery-smartMenu.js"></script>
+    <script src="js/shortcut.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/core.js"></script>
+    <script>
+    $().ready(function() {
+        //IE下禁止选中
+        document.body.onselectstart = document.body.ondrag = function() { return false; }
+        //初始化
+        Core.init();
+    });
+    </script>
+    <!--[if IE]>
         <style>
         #desk{display:none !important;}
         #task-bar{display:none !important;}
@@ -30,30 +31,31 @@
         <div id="ie6-warning">您正在使用 Internet Explorer 浏览器，您将无法使用本站提供的服务。建议您使用Chrome类浏览器： <a href="http://www.mozillaonline.com/">Firefox</a> / <a href="http://www.google.com/chrome/?hl=zh-CN">Chrome</a> / <a href="http://www.apple.com.cn/safari/">Safari</a> / <a href="http://www.operachina.com/">Opera</a>
         </div>
         <![endif]-->
+</head>
 
-    </head>
-    <body id="lxcn">
-    	<div id="web_bg">
-			<script>
-				now = new Date();
-				erke = now.getSeconds();
-				erke = erke - parseInt(erke/4)*4 + 1;
-				document.write("<img style='position:fixed;' src='images/bg"+erke+".jpg' height='100%' width='100%' />");
-			</script>
-		</div>
-        <div id="task-bar">
-            <ul class="task-window">
-            </ul>
+<body id="lxcn">
+    <div id="web_bg">
+        <script>
+        now = new Date();
+        erke = now.getSeconds();
+        erke = erke - parseInt(erke / 4) * 4 + 1;
+        document.write("<img style='position:fixed;' src='images/bg" + erke + ".jpg' height='100%' width='100%' />");
+        </script>
+    </div>
+    <div id="task-bar">
+        <ul class="task-window">
+        </ul>
+        <ul class="task-panel">
+            <li class="sys" title="@"><b class="">@</b></li>
+        </ul>
+    </div>
+    <div id="desk">
+        <ul></ul>
+    </div>
+    <div style="display:none;"></div>
+    <div id="iedis" style="margin:150px auto;width:650px;font-size:22px;border:1px solid #fff;padding:20px;background:#fff;display:none;">
+        <p><img src="images/ie.gif" style="float:left;margin-right:10px;" />本站不支持IE浏览器，请您使用Chrome类核浏览器访问本站！</p>
+    </div>
+</body>
 
-            <ul class="task-panel">
-                <li class="sys" title="@"><b class="">@</b></li>
-            </ul>
-
-        </div>
-        <div id="desk"><ul></ul></div>
-		<div style="display:none;"></div>
-		<div id="iedis" style="margin:150px auto;width:650px;font-size:22px;border:1px solid #fff;padding:20px;background:#fff;display:none;">
-			<p><img src="images/ie.gif" style="float:left;margin-right:10px;" />本站不支持IE浏览器，请您使用Chrome类核浏览器访问本站！</p>
-		</div>
-    </body>
 </html>
